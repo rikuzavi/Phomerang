@@ -866,3 +866,20 @@ document.getElementById("downloadimg").addEventListener("click", () => {
     frame.appendChild(clone);
   });
 });
+
+function checkScreen() {
+      const main = document.getElementsByTagName('body')[0]
+      if (window.innerWidth <= 1100) {
+        main.style.display = "none";
+        alert('On Development')
+      } else {
+        main.style.display = "block";
+        alert('page reloaded')
+      }
+}
+
+    // Run on load
+checkScreen();
+
+// Run on resize
+window.addEventListener("resize", checkScreen);
